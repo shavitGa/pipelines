@@ -1,5 +1,5 @@
 resources:
-  - name: shav
+  - name: OkeyDo
     type: GitRepo
     configuration:
       path: ShavitGa/OkeyDo
