@@ -13,7 +13,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: my_git
+            - name: ff
         execution:
           onExecute:
             - echo ci
