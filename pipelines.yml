@@ -1,5 +1,5 @@
 resources:
-  - name: OkeyDo
+  - name: ff
     type: GitRepo
     configuration:
       path: ShavitGa/OkeyDo
