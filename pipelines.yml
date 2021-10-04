@@ -6,3 +6,36 @@ resources:
       gitProvider: github
       branches:
         include: main
+pipelines:
+  - name: test_and_deploy
+    steps:
+      - name: test
+        type: Bash
+        configuration:
+          inputResources:
+            - name: my_git
+        execution:
+          onExecute:
+            - echo ci
+      - name: build
+        type: Bash
+        configuration:
+          runtime:
+            type: host
+          inputSteps:
+            - name: test
+        execution:
+          onExecute:
+            - echo build
+            - date >> foo
+            - add_run_files foo foo
+      - name: deploy
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: build
+        execution:
+          onExecute:
+            - restore_run_files foo foo
+            - cat foo
+            - echo deploy
