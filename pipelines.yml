@@ -1,5 +1,5 @@
 resources:
-  - name: ff
+  - name: ShavTest
     type: GitRepo
     configuration:
       path: ShavitGa/OkeyDo
@@ -13,7 +13,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: ff
+            - name: ShavTest
         execution:
           onExecute:
             - echo ci
