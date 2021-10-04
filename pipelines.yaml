@@ -5,7 +5,7 @@ resources:
       path: ShavitGa/OkeyDo
       gitProvider: github
       branches:
-        include: master
+        include: main
 pipelines:
   - name: test_and_deploy
     steps:
